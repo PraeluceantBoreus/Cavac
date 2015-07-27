@@ -1,0 +1,4 @@
+name: Cavac
+version: 0.0.1
+author: Richard Stöckl
+main: io.github.praeluceantboreus.cavac.main.CavacPlugin
