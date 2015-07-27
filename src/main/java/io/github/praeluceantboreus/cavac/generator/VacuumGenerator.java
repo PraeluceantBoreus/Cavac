@@ -17,7 +17,7 @@ public class VacuumGenerator extends ChunkGenerator
 	private Material ground;
 	private ArrayList<TreeType> trees;
 
-	public VacuumGenerator(int xWidth, int zWidth, int height, int begin, Material ground)
+	public VacuumGenerator(int xWidth, int zWidth, int height, int begin, Material ground, ArrayList<TreeType> trees)
 	{
 		super();
 		this.xWidth = xWidth;
@@ -25,6 +25,7 @@ public class VacuumGenerator extends ChunkGenerator
 		this.height = height;
 		this.begin = begin;
 		this.ground = ground;
+		this.trees = trees;
 	}
 
 	@Override
