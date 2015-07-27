@@ -42,14 +42,15 @@ public class SkyPopulator extends BlockPopulator
 					Location loc = new Location(arg0, x, y, z);
 					loc.getBlock().setType(ground);
 				}
-				if ((x == xWidth - 1 || x == 0) && (z == zWidth - 1 || z == 0))
+				Location loc = new Location(arg0, x, begin + 1, z);
+				if ((x == xWidth - 1 || x == 0) && (z == zWidth - 1 || z == 0) && loc.getBlock().getType().equals(Material.AIR))
 				{
 					if (trees.size() < 1)
 						trees = new ArrayList<>(originalTrees);
 					Collections.shuffle(trees, arg1);
 					TreeType type = trees.get(0);
 					trees.remove(0);
-					arg0.generateTree(new Location(arg0, x, begin + 1, z), type);
+					arg0.generateTree(loc, type);
 				}
 			}
 		}
